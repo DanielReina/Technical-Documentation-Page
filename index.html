@@ -12,18 +12,20 @@
 <body>
     <nav id="navbar">
         <header>Métodos Array</header>
-        <a href="#Map" class="nav-link">Map</a>
-        <a href="#Filter" class="nav-link">Filter</a>
-        <a href="#Reduce" class="nav-link">Reduce</a>
-        <a href="#Reverse" class="nav-link">Reverse</a>
-        <a href="#Sort" class="nav-link">Sort</a>
+        <ul>
+            <li><a href="#Map" class="nav-link">Map</a></li>
+            <li><a href="#Filter" class="nav-link">Filter</a></li>
+            <li><a href="#Reduce" class="nav-link">Reduce</a></li>
+            <li><a href="#Reverse" class="nav-link">Reverse</a></li>
+            <li><a href="#Sort" class="nav-link">Sort</a></li>
+        </ul>       
     </nav>
     <main id="main-doc">
         <section class='main-section' id='Map'>
             <header>Map</header>
-            <p>El método <code>.map()</code> crea un nuevo array <span>(no muta el array original)</span>
+            <p>El método <span>map()</span> crea un nuevo array <span>(no muta el array original)</span>
                 con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.</p>
-            <p><code>.map()</code> llama a la función callback provista una vez por elemento de un array, en orden,
+            <p><span>map()</span> llama a la función callback provista una vez por elemento de un array, en orden,
                 y construye un nuevo array con los resultados. callback se invoca sólo para los
                 índices del array que tienen valores asignados; no se invoca en los índices
                 que han sido borrados o a los que no se ha asignado valor.</p>
@@ -38,21 +40,21 @@
             var doubles = numbers.map(function(x) {
             return x * 2;
             });
-            // doubles is now [2, 10, 20, 30]
-            // numbers is still [1, 5, 10, 15]
+            <span>// doubles is now [2, 10, 20, 30]
+            // numbers is still [1, 5, 10, 15]</span>
             
             var numbers = [1, 4, 9];
             var roots = numbers.map(function(num) {
             return Math.sqrt(num);
             });
-            // roots is now [1, 2, 3]
-            // numbers is still [1, 4, 9]</code>
+            <span>// roots is now [1, 2, 3]
+            // numbers is still [1, 4, 9]</span></code>
             <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map">Más
                 información aquí</a>
         </section>
         <section class="main-section" id='Filter'>
             <header>Filter</header>
-            <p>El método <code>filter()</code> crea un nuevo array <span>(no muta el array original)</span> con todos
+            <p>El método <span>filter()</span> crea un nuevo array <span>(no muta el array original)</span> con todos
                 los elementos que cumplan la condición
                 implementada por la función
                 dada.</p>
@@ -70,14 +72,14 @@
                 const result = words.filter(word => word.length > 6);
                 
                 console.log(result);
-                // expected output: Array ["exuberant", "destruction", "present"]
+                <span>// expected output: Array ["exuberant", "destruction", "present"]</span>
             </code>
             <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Más
                 información aquí</a>
         </section>
         <section class="main-section" id='Reduce'>
             <header>Reduce</header>
-            <p>El método <code>reduce()</code> ejecuta una función reductora sobre cada elemento de un array,
+            <p>El método <span>reduce()</span> ejecuta una función reductora sobre cada elemento de un array,
                 devolviendo como resultado un único
                 valor <span>(no muta el array original)</span>.</p>
             <p>Aspectos importantes:</p>
@@ -92,20 +94,20 @@
                 const array1 = [1, 2, 3, 4];
                 const reducer = (accumulator, currentValue) => accumulator + currentValue;
                 
-                // 1 + 2 + 3 + 4
-                console.log(array1.reduce(reducer));
-                // expected output: 10
+                <span>// 1 + 2 + 3 + 4</span>
+                consolrray1.reduce(reducer));
+                <span>// expected output: 10</span>
                 
-                // 5 + 1 + 2 + 3 + 4
-                console.log(array1.reduce(reducer, 5));
-                // expected output: 15
+                <span>// 5 + 1 + 2 + 3 + 4</span>
+                consolrray1.reduce(reducer, 5));
+                <span>// expected output: 15</span>
             </code>
             <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce">Más
                 información aquí</a>
         </section>
         <section class="main-section" id='Reverse'>
             <header>Reverse</header>
-            <p>El método <code>reverse()</code> invierte el orden de los elementos de un array <span>(muta el array
+            <p>El método <span>reverse()</span> invierte el orden de los elementos de un array <span>(muta el array
                     original)</span> in place. El primer elemento pasa a ser el último y
                 el último pasa a ser el primero.</p>
             <p>Aspectos importantes:</p>
@@ -116,22 +118,22 @@
             <code>
                 const array1 = ['one', 'two', 'three'];
                 console.log('array1:', array1);
-                // expected output: "array1:" Array ["one", "two", "three"]
+                <span>// expected output: "array1:" Array ["one", "two", "three"]</span>
                 
                 const reversed = array1.reverse();
                 console.log('reversed:', reversed);
-                // expected output: "reversed:" Array ["three", "two", "one"]
+                <span>// expected output: "reversed:" Array ["three", "two", "one"]</span>
                 
-                // Careful: reverse is destructive -- it changes the original array.
+                <span>// Careful: reverse is destructive -- it changes the original array.</span>
                 console.log('array1:', array1);
-                // expected output: "array1:" Array ["three", "two", "one"]
+                <span>// expected output: "array1:" Array ["three", "two", "one"]</span>
             </code>
             <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse">Más
                 información aquí</a>
         </section>
         <section class="main-section" id='Sort'>
             <header>Sort</header>
-            <p>El método <code>sort()</code> ordena los elementos de un arreglo (array) localmente y devuelve el arreglo
+            <p>El método <span>sort()</span> ordena los elementos de un arreglo (array) localmente y devuelve el arreglo
                 ordenado <span>(muta el array original)</span>. La ordenación no
                 es necesariamente estable. El modo de ordenación por defecto responde a la posición del valor del string
                 de acuerdo a su
@@ -143,17 +145,17 @@
             </ul>
             <p>Ejemplo:</p>
             <code>var frutas = ['guindas', 'manzanas', 'bananas'];
-            frutas.sort(); // ['bananas', 'guindas', 'manzanas']
+            frutas.sort(); <span>// ['bananas', 'guindas', 'manzanas']</span>
             
             var puntos = [1, 10, 2, 21];
-            puntos.sort(); // [1, 10, 2, 21]
-            // Tenga en cuenta que 10 viene antes que 2
-            // porque '10' viene antes que '2' según la posición del valor Unicode.
+            puntos.sort(); <span>// [1, 10, 2, 21]</span>
+            <span>// Tenga en cuenta que 10 viene antes que 2</span>
+            <span>// porque '10' viene antes que '2' según la posición del valor Unicode.</span>
             
             var cosas = ['word', 'Word', '1 Word', '2 Words'];
-            cosas.sort(); // ['1 Word', '2 Words', 'Word', 'word']
-            // En Unicode, los números vienen antes que las letras mayúsculas
-            // y estas vienen antes que las letras minúsculas.</code>
+            cosas.sort(); <span>// ['1 Word', '2 Words', 'Word', 'word']</span>
+        <span> // En Unicode, los números vienen antes que las letras mayúsculas</span>
+        <span> // y estas vienen antes que las letras minúsculas.</span></code>
             <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">Más
                 información
                 aquí</a>
